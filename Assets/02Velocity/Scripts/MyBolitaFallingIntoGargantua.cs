@@ -1,14 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
-using Random = System.Random;
 
 public class MyBolitaFallingIntoGargantua : MonoBehaviour
 {
     private MyVector position;
-    [SerializeField] private MyVector acceleration;
+    private MyVector acceleration;
     [SerializeField] private MyVector velocity;
 
     [Header("World")]
@@ -30,10 +28,13 @@ public class MyBolitaFallingIntoGargantua : MonoBehaviour
     private void Update()
     {
         position.Draw(Color.blue);
-        acceleration.Draw(position, Color.green);
         velocity.Draw(position, Color.red);
+        acceleration.Draw(position, Color.green);
+        
 
-        //acceleration = /**/;
+        MyVector myPosition = new MyVector(transform.position.x, transform.position.y);
+        MyVector gargantuaPosition = new MyVector(gargantua.position.x, gargantua.position.y);
+        acceleration = gargantuaPosition - myPosition;
     }
 
     public void Move()
@@ -45,6 +46,4 @@ public class MyBolitaFallingIntoGargantua : MonoBehaviour
 
     }
 
-
-    //clase 10
 }
