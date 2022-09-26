@@ -10,7 +10,7 @@ public class MyBolitaFallingIntoGargantua : MonoBehaviour
     [SerializeField] private MyVector velocity;
 
     [Header("World")]
-    [SerializeField] Camera camera;
+    [SerializeField] Camera cam;
     [SerializeField] Transform gargantua;
 
 
