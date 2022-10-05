@@ -79,4 +79,3 @@ struct MyVector
         return new MyVector(x: a.x * b, y: a.y * b);
     }
 }
-
