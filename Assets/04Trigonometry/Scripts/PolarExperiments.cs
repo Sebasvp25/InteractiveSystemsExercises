@@ -38,5 +38,5 @@ public class PolarExperiments : MonoBehaviour
         float y = radius * Mathf.Sin(angle * Mathf.Deg2Rad);
         return new Vector3(x, y, 0);
     }
-    //clase 16 min 11:25
+    
 }
